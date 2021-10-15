@@ -9,7 +9,6 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.startMaximized = true;
-        Configuration.baseUrl = "https://demoqa.com";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
            // DesiredCapabilities capabilities = new DesiredCapabilities();
