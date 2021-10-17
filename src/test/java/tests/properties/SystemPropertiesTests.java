@@ -51,6 +51,13 @@ public class SystemPropertiesTests {
         System.out.println(browser);
         System.out.println(version);
         System.out.println(browserSize);
-       // gradle clean properties_tests -Dbrowser=opera -Dversion=93
+        // gradle clean properties_tests -Dbrowser=opera -Dversion=93
     }
-}
+
+    //@Test
+  //  @Tag("properties")
+   // void transferUrl() {
+   //     String url = ("https://selenoid.autotests.cloud/wd/hub/");
+    //    System.out.println(url);
+    }
+//}

@@ -8,6 +8,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static java.lang.String.format;
+
 
 public class TestBase {
     @BeforeAll
@@ -18,7 +20,8 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+        Configuration.remote = format( "https://selenoid.autotests.cloud/wd/hub/","login","password");
+       // Configuration.baseUrl = "https://selenoid.autotests.cloud/wd/hub/";
     }
 
     @AfterEach
