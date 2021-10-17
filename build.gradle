@@ -1,17 +1,14 @@
 plugins {
-    id 'java'
+    id 'java-library'
     id 'io.qameta.allure' version '2.8.1'
 }
-
-group 'org.example'
-version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.15.0",
-    selenideVersion = "5.24.4",
+def allureVersion = "2.14.0",
+    selenideVersion = "5.24.0",
     junitVersion = "5.8.1"
 
 allure {
@@ -32,9 +29,8 @@ dependencies {
             "com.github.javafaker:javafaker:1.0.2",
             "org.aeonbits.owner:owner:1.0.12",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
-
     testRuntimeOnly(
-            "org.slf4j:slf4j-simple:1.7.32",
+            "org.slf4j:slf4j-simple:1.7.29",
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
@@ -46,19 +42,18 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
-  //  testLogging {
-   //     lifecycle {
+    testLogging {
+        lifecycle {
 //            events "started", "failed"
-           // events "started", "skipped", "failed", "standard_error", "standard_out"
-         //   exceptionFormat "short"
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
         }
-    //}
-    task properties_tests(type: Test) {
+    }
+}
+task properties_tests(type: Test) {
         systemProperty("browserSize", System.getProperty("browserSize", "400x400"))
         useJUnitPlatform {
             includeTags "properties"
         }
 
-            }
-
-//}
+}

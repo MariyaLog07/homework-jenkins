@@ -1,4 +1,4 @@
-package ru.desnol.properties;
+package tests.properties;
 
 import config.CredentialsConfig;
 import org.aeonbits.owner.ConfigFactory;

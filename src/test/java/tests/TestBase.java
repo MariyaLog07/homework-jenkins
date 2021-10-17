@@ -1,4 +1,4 @@
-package ru.desnol;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
