@@ -21,7 +21,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        Configuration.remote = format("https://%s:%s%s","login", "password","url");
+        Configuration.remote = format("https://%s:%s%s");
     }
 
     @AfterEach
