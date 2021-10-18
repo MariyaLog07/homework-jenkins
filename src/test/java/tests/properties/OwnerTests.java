@@ -9,7 +9,7 @@ import static java.lang.String.format;
 
     @Tag("properties")
     public class OwnerTests {
-        String url = "https://selenoid.autotests.cloud/wd/hub/";
+        String url = System.getProperty("url","selenoid.autotests.cloud/wd/hub/");
     public CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
 
     @Test
@@ -18,7 +18,7 @@ import static java.lang.String.format;
         String password = credentials.password();
         System.out.println(login);
         System.out.println(password);
-        String message = format("https://%s:%s%s", login, password,url);
-        System.out.println(format("https://%s:%s%s", login, password,url));
+        String result = format("https://%s:%s%s", login, password,url);
+        System.out.println(result);
     }
 }

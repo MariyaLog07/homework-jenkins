@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+
 import static java.lang.String.format;
 
 
@@ -20,7 +21,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        Configuration.remote = format( "https://%s:%s%s","login", "password","url");
+        Configuration.remote = format("https://%s:%s%s","login", "password","url");
     }
 
     @AfterEach
