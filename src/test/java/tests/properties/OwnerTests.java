@@ -18,7 +18,7 @@ import static java.lang.String.format;
         String password = credentials.password();
         System.out.println(login);
         System.out.println(password);
-            String message = format(url, login, password);
-        System.out.println(format(url, login, password));
+        String message = format("https://%s:%s%s", login, password,url);
+        System.out.println(format("https://%s:%s%s", login, password,url));
     }
 }

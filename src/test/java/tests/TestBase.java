@@ -20,8 +20,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        Configuration.remote = format( "https://selenoid.autotests.cloud/wd/hub/","login","password");
-       // Configuration.baseUrl = "https://selenoid.autotests.cloud/wd/hub/";
+        Configuration.remote = format( "https://%s:%s%s","login", "password","url");
     }
 
     @AfterEach
