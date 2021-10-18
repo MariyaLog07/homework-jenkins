@@ -7,7 +7,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import tests.properties.OwnerTests;
+
 
 
 import static java.lang.String.format;
@@ -22,7 +22,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        Configuration.remote = format("https://%s:%s@%s");
+        //Configuration.remote = format("https://%s:%s@%s");
     }
 
     @AfterEach
