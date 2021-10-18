@@ -16,7 +16,9 @@ import static java.lang.String.format;
     void readCredentialsTest() {
         String login = credentials.login();
         String password = credentials.password();
-        String result = format("https://%s:%s@%s", login, password,url);
-        System.out.println(result);
+        System.out.println(login);
+        System.out.println(password);
+        String message = format("i login as %s with password %s", login, password);
+        System.out.println(message);
     }
 }
