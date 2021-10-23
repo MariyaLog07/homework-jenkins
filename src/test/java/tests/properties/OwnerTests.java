@@ -21,5 +21,6 @@ import static java.lang.String.format;
         String password = credentials.password();
         String remote = format("https://%s:%s@%s", login, password, url);
         Configuration.remote=remote;
+        System.out.println(remote);
     }
 }
