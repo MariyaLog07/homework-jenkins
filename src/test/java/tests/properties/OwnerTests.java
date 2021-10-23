@@ -19,10 +19,7 @@ import static java.lang.String.format;
         String url = System.getProperty("url", "https://selenoid.autotests.cloud/wd/hub/");
         String login = credentials.login();
         String password = credentials.password();
-        System.out.println(login);
-        System.out.println(password);
         String remote = format("https://%s:%s@%s", login, password, url);
         Configuration.remote=remote;
-        System.out.println(remote);
     }
 }
